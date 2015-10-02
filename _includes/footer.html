@@ -1,5 +1,5 @@
 {% if page.imagefeature %}
-<footer id="footer"  class="blog-background overlay text-center align-middle animated from-top" style="background-image: url({{ site.url }}/images/{{ page.imagefeature }})" >
+<footer id="footer"  class="blog-background overlay text-center align-middle animated from-top" style="background-image: url({{ site.url }}/images/{{ page.imagefeature }})" />
 {% else %}
 <footer id="footer"  class="blog-background overlay text-center align-middle animated from-top" style="background-image: url({{ site.url }}/images/{{ site.default_bg }})" >
 {% endif %}
@@ -51,6 +51,11 @@
             {% if site.owner.weibo %}<li>
                 <a href="http://www.weibo.com/{{ site.owner.weibo }}" data-toggle="tooltip" title="{{ site.owner.name}} on Weibo" target="_blank">
                     <i class="icon-weibo"></i>
+                </a>
+            </li>{% endif %}
+            {% if site.owner.tumblr %}<li>
+                <a href="http://twitter.com/{{ site.owner.tumblr }}" data-toggle="tooltip" title="{{ site.owner.name}} on Tumblr" target="_blank">
+                    <i class="icon-tumblr"></i>
                 </a>
             </li>{% endif %}
         </ul>
