@@ -1,0 +1,24 @@
+<div id="fade"></div>
+<a id="slide" class="animated fade"></a>
+<aside id="sidebar">
+    <nav id="navigation">
+        <a class="brand light" href="{{ site.url }}" role="banner" itemprop="url">
+                {% if site.logo %}
+                <img itemprop="logo" src="{{ site.url }}/images/{{ site.logo }}" alt="{{ site.title }} Logo"  class="post-avatar img-circle img-responsive"/>
+                {% endif %}
+            <h1 class="blog-title regular" itemprop="name">
+                {{ site.title }}
+            </h1>
+            </a>
+        <hr> {% for link in site.links %}
+        <li>
+            {% if link.external %}
+            <a href="{{ link.url }}">{{ link.title }}</a> 
+            {% else %}
+            <a href="{{ site.url }}{{ link.url }}">{{ link.title }}</a> 
+            {% endif %} 
+        </li>
+        {% endfor %}
+        <li><a href="{{ site.url }}/feed.xml" title="Atom/RSS feed"><i class="icon-rss"></i> Feed</a></li>
+    </nav>
+</aside>

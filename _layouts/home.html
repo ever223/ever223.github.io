@@ -23,7 +23,14 @@ Description: Awesome dude, awesome life
 <a id="slide" class="animated fade"></a>
 <aside id="sidebar">
     <nav id="navigation">
-    <h2>MENU</h2>
+        <a class="brand light" href="{{ site.url }}" role="banner" itemprop="url">
+
+                {% if site.logo %}<img itemprop="logo" src="{{ site.url }}/images/{{ site.logo }}" alt="{{ site.title }} Logo"  class="post-avatar img-circle img-responsive"/>{% endif %}
+
+            <h1 class="blog-title regular" itemprop="name">
+                {{ site.title }}
+            </h1>
+        </a>
     <hr>
 {% for link in site.links %}
             <li>{% if link.external %}
@@ -51,7 +58,7 @@ Description: Awesome dude, awesome life
         <div class="container">
             <a class="brand light" href="{{ site.url }}" role="banner" itemprop="url">
 
-                {% if site.logo %}<img itemprop="logo" src="{{ site.url }}/images/{{ site.logo }}" alt="{{ site.title }} Logo" />{% endif %}
+                {% if site.logo %}<img itemprop="logo" src="{{ site.url }}/images/{{ site.logo }}" alt="{{ site.title }} Logo"  class="post-avatar img-circle img-responsive"/>{% endif %}
 
             <h1 class="blog-title light" itemprop="name">
                 {{ site.title }}
@@ -121,8 +128,7 @@ Description: Awesome dude, awesome life
         </div>
     </div>
 </div>
-    {% include footer.html %}
-
+{% include footer.html %}
 {% include scripts.html %}  
 </body>
 </html>

@@ -2,9 +2,9 @@
 layout: post
 title: "DES&AES加密解密"         # title of the post
 # description:   
-headline: Some headline        # Will appear in bold letters on top of the post
+headline: Cipher类的使用        # Will appear in bold letters on top of the post
 date:   2015-10-02 13:56:31
-# modified: YYYY-MM-DD        
+modified: 2015-10-02 22:56:31       
 category: java
 tags: ['Security', 'DES', 'AES']
 # image: 

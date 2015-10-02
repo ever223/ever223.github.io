@@ -2,4 +2,6 @@ _site
 .sass-cache
 _drafts/
 .DS_Store
-.idea/
+.idea
+.local
+.local/*

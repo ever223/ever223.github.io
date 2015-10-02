@@ -15,7 +15,7 @@ triangleheader:   true
 fin_color:        "255,255,255"
 # Change url to your domain. Leave localhost server or blank when working locally.
 # url:              "http://localhost:4000"
-
+encoding : utf-8
 
 # Owner/author information
 owner:
@@ -48,7 +48,7 @@ owner:
 links:
   - title: <i class="icon-home"></i> 主页
     url: /
-    external: false
+    external: true
     icon: home
   # - title: <i class="icon-book"></i> Documentation
   #   url: /documentation
@@ -56,8 +56,8 @@ links:
     url: /categories
   - title: <i class="icon-tags"></i> 标签
     url: /tags
-#  - title: xiaoo_gan who?
-#    url: /hossain-mohd-faysal
+  - title:  <i class="icon-male"></i> 关于我
+    url: /about
 
 # http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
 timezone:    China/Zhejiang
