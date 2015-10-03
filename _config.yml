@@ -77,8 +77,8 @@ permalink:   /:categories/:title
 #  entity_output: as_char
 #  toc_levels: 1..6
 #  use_coderay: false
-
-highlighter: pygments
+pygments: true
+#highlighter: pygments
 markdown: redcarpet
 redcarpet:
   extensions: [
