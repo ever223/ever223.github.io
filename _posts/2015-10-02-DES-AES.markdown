@@ -1,16 +1,17 @@
 ---
 layout: post
 title: "DES&AES加密解密"         # title of the post
-# description:   
+description: "利用Cipher类对DES和AES进行加密解密"
 headline: Cipher类的使用        # Will appear in bold letters on top of the post
 date:   2015-10-02 13:56:31
 modified: 2015-10-02 22:56:31       
 category: java
 tags: ['Security', 'DES', 'AES']
+excerpt: "利用Cipher类对DES和AES进行加密解密"
 # image: 
 # feature: some-image.jpg
 comments: true
-# mathjax:
+mathjax: true
 ---
 
 ## 介绍 ##
@@ -21,11 +22,10 @@ comments: true
  
 > 　1977年1月，美国政府颁布：采纳IBM公司设计的方案作为非机密数据的正式数据加密标准（DES Data Encryption Standard)。  
 　　目前在国内，随着三金工程尤其是金卡工程的启动，DES算法在POS、ATM、磁卡及智能卡（IC卡）、加油站、高速公路收费站等领域被广泛应用，以此来实现关键数据的保密，如信用卡持卡人的PIN的加密传输，IC卡与POS间的双向认证、金融交易数据包的MAC校验等，均用到DES算法。  
->
 >> DES算法的入口参数有三个：Key、Data、Mode  
->> 其中Key为8个字节共64位，是DES算法的工作密钥   
->> Data也为8个字节64位，是要被加密或被解密的数据   
->> Mode为DES的工作方式，有两种：加密或解密   
+>> * 其中Key为8个字节共64位，是DES算法的工作密钥   
+>> * Data也为8个字节64位，是要被加密或被解密的数据   
+>> * Mode为DES的工作方式，有两种：加密或解密   
 >
 > **DES算法是这样工作的：**   
 　　如Mode为加密，则用Key 去把数据Data进行加密， 生成Data的密码形式（64位）作为DES的输出结果；  

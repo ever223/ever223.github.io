@@ -1,5 +1,5 @@
 title:            xiaoo_gan
-description:      iOS、Java、美剧、古典音乐.
+description:
 logo:             xiaoo_gan.jpg
 duoshuo_short_name: ever223
 # Assign a default image for your site's header and footer
@@ -7,7 +7,7 @@ default_bg:       default_bg1.jpg
 search:           true
 share:            true
 # Read Time is a calculator tp provide post read-time based on word count. Usage is recommended.
-readtime:         true
+readtime:         flase
 # Turn on or off the fin animations in the header and footer
 animated_fins:    true
 triangleheader:   true
@@ -23,7 +23,7 @@ owner:
   avatar:         xiaoo_gan.jpg
   email:          85265900@qq.com
   # Use the coder's toolbox at http://coderstoolbox.net/string/#!encoding=xml&action=encode&charset=us_ascii to encode your description into XML string
-  description:     Coder
+  description:     学生、iOS、Java、美剧、古典音乐.
   # Social networking links used in footer. Update and remove as you like.
   # To register at HMFAYSAL SOCIAL, visit http://social.hmfaysal.tk
   # twitter:
@@ -62,20 +62,41 @@ links:
 # http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
 timezone:    China/Zhejiang
 future:      true
-pygments: true
-markdown:    kramdown
+
 paginate:    6
 paginate_path: "page:num"
 
 # https://github.com/mojombo/jekyll/wiki/Permalinks
 permalink:   /:categories/:title
 
-kramdown:
-  auto_ids: true
-  footnote_nr: 1
-  entity_output: as_char
-  toc_levels: 1..6
-  use_coderay: false
+#pygments: true
+#markdown:    kramdown
+#kramdown:
+#  auto_ids: true
+#  footnote_nr: 1
+#  entity_output: as_char
+#  toc_levels: 1..6
+#  use_coderay: false
+
+highlighter: pygments
+markdown: redcarpet
+redcarpet:
+  extensions: [
+   "no_intra_emphasis"
+   ,"fenced_code_blocks"
+   ,"autolink"
+   ,"tables"
+   ,"strikethrough"
+   ,"superscript"
+   ,"with_toc_data"
+   ,"footnotes"
+   ,"highlight"
+   ,"underline"
+   ,"quote"
+   ,"lax_spacing"
+   ,"prettify"
+#   ,"html_toc"
+  ]
 
   coderay:
     coderay_line_numbers: 
