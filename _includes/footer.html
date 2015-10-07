@@ -49,13 +49,18 @@
                 </a>
             </li>{% endif %}
             {% if site.owner.weibo %}<li>
-                <a href="http://www.weibo.com/{{ site.owner.weibo }}" data-toggle="tooltip" title="{{ site.owner.name}} on Weibo" target="_blank">
+                <a href="http://www.weibo.com/{{ site.owner.weibo }}" data-toggle="tooltip" title="{{ site.owner.name}} on 微博" target="_blank">
                     <i class="icon-weibo"></i>
                 </a>
             </li>{% endif %}
             {% if site.owner.tumblr %}<li>
-                <a href="http://twitter.com/{{ site.owner.tumblr }}" data-toggle="tooltip" title="{{ site.owner.name}} on Tumblr" target="_blank">
+                <a href="http://tumblr.com/blog/{{ site.owner.tumblr }}" data-toggle="tooltip" title="{{ site.owner.name}} on Tumblr" target="_blank">
                     <i class="icon-tumblr"></i>
+                </a>
+            </li>{% endif %}
+            {% if site.owner.douban %}<li>
+                <a href="http://www.douban.com/people/{{ site.owner.douban }}" data-toggle="tooltip" title="{{ site.owner.name}} on 豆瓣" target="_blank">
+                    <i class="icon-user"></i>
                 </a>
             </li>{% endif %}
         </ul>
@@ -69,7 +74,7 @@
                     <a href="{{ link.url }}">{% if link.icon %}<i class="icon-{{ link.icon }}"></i>{% else %}{{ link.title }}{% endif %}</a>&nbsp;&bull;
                 {% else %}
                     <a href="{{ site.url }}{{ link.url }}">{% if link.icon %}<i class="icon-{{ link.icon }}"></i>{% else %}{{ link.title }}{% endif %}</a>&nbsp;&bull;
-                {% endif %} 
+                {% endif %}
             </li>
             {% endfor %}
             <li><a href="{{ site.url }}/feed.xml" title="Atom/RSS feed"><i class="icon-rss"></i> Feed</a></li>
