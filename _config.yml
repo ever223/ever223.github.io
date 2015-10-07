@@ -1,5 +1,5 @@
 title:            xiaoo_gan
-description:
+description:  "不正式上路，永远达不到目的地。"
 logo:             xiaoo_gan.jpg
 duoshuo_short_name: ever223
 # Assign a default image for your site's header and footer
@@ -50,8 +50,6 @@ links:
     url: /
     external: true
     icon: home
-  # - title: <i class="icon-book"></i> Documentation
-  #   url: /documentation
   - title: <i class="icon-bookmark"></i> 分类
     url: /categories
   - title: <i class="icon-tags"></i> 标签

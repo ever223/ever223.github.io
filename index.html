@@ -44,7 +44,8 @@ tags: [学生, iOS, Java]
 	                            </a>
 	                        </li>
 	                        <li>
-					            <a href="http://v.t.sina.com.cn/share/share.php?url={{ site.url }}{{ page.url }}&title={{ page.title }}" onclick="window.open(this.href, 'weibo-share','width=580,height=296');return false;" data-toggle="tooltip" title="Share on Weibo" itemprop="Weibo">
+					            <a href="http://v.t.sina.com.cn/share/share.php?url={{ site.url }}{{ page.url }}&title={{ page.title }}"
+                                   onclick="window.open(this.href, 'weibo-share','width=580,height=296');return false;" data-toggle="tooltip" title="Share on Weibo">
 					                <i class="icon-weibo"></i>
 					            </a>
 					        </li>
@@ -76,25 +77,8 @@ tags: [学生, iOS, Java]
 	                    </p>
 	                    <ul class="social-mini text-center">
 	                        <li>
-	                            <a href="https://twitter.com/intent/tweet?text=&quot;{{ post.title }}&quot;%20{{ site.url }}{{ post.url }}%20via%20&#64;{{ site.owner.twitter }}"
-	                            onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;" data-toggle="tooltip" title="Share on Twitter">
-	                                <i class="icon-twitter"></i>
-	                            </a>
-	                        </li>
-	                        <li>
-	                            <a  href="https://www.facebook.com/sharer/sharer.php?u={{ site.url }}{{ post.url }}"
-	                            onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;" data-toggle="tooltip" title="Share on Facebook">
-	                                <i class="icon-facebook"></i>
-	                            </a>
-	                        </li>
-	                        <li>
-	                            <a href="https://plus.google.com/share?url={{ site.url }}{{ post.url }}"
-	                           onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;" data-toggle="tooltip" title="Share on Google plus">
-	                                <i class="icon-google-plus"></i>
-	                            </a>
-	                        </li>
-	                        <li>
-					            <a href="http://v.t.sina.com.cn/share/share.php?url={{ site.url }}{{ page.url }}&title={{ page.title }}" onclick="window.open(this.href, 'weibo-share','width=580,height=296');return false;" data-toggle="tooltip" title="Share on Weibo" itemprop="Weibo">
+					            <a href="http://v.t.sina.com.cn/share/share.php?url={{ site.url }}{{ page.url }}&title={{ page.title }}"
+								   onclick="window.open(this.href, 'weibo-share','width=580,height=296');return false;" data-toggle="tooltip" title="Share on Weibo">
 					                <i class="icon-weibo"></i>
 					            </a>
 					        </li>
@@ -124,7 +108,7 @@ tags: [学生, iOS, Java]
 	                        <time datetime="{{ post.date | date_to_xmlschema }}" class="post-time">发表时间：{{ post.date | date: "%Y年%m月%d日" }}</time>
 	                        {% if post.modified %}
 	                            {% if modifiedtime != posttime %}
-	                                &nbsp;&nbsp;<code>修改时间： <time datetime="{{ post.modified | date: "%Y年%m月%d日" }}" itemprop="dateModified">{{ post.modified | date: "%Y年%m月%d日" }}</time></code>
+	                                &nbsp;&nbsp;<code>修改时间： <time datetime="{{ post.modified | date: '%Y年%m月%d日' }}" itemprop="dateModified">{{ post.modified | date: "%Y年%m月%d日" }}</time></code>
 	                            {% endif %}
 	                        {% endif %}
 	                        &nbsp;&nbsp;类别：
@@ -178,7 +162,7 @@ tags: [学生, iOS, Java]
 	                        <time datetime="{{ post.date | date_to_xmlschema }}" class="post-time">发表时间：{{ post.date | date: "%Y年%m月%d日" }}</time>
 	                        {% if post.modified %}
 	                            {% if modifiedtime != posttime %}
-	                                &nbsp;&nbsp;<code>修改时间： <time datetime="{{ post.modified | date: "%Y年%m月%d日" }}" itemprop="dateModified">{{ post.modified | date: "%Y年%m月%d日" }}</time></code>
+	                                &nbsp;&nbsp;<code>修改时间： <time datetime="{{ post.modified | date: '%Y年%m月%d日' }}" itemprop="dateModified">{{ post.modified | date: "%Y年%m月%d日" }}</time></code>
 	                            {% endif %}
 	                        {% endif %}
 	                        &nbsp;&nbsp;类别：
@@ -226,7 +210,7 @@ tags: [学生, iOS, Java]
 	                        <time datetime="{{ post.date | date_to_xmlschema }}" class="post-time">发表时间：{{ post.date | date: "%Y年%m月%d日" }}</time>
 	                        {% if post.modified %}
 	                            {% if modifiedtime != posttime %}
-	                                &nbsp;&nbsp;<code>修改时间： <time datetime="{{ post.modified | date: "%Y年%m月%d日" }}" itemprop="dateModified">{{ post.modified | date: "%Y年%m月%d日" }}</time></code>
+	                                &nbsp;&nbsp;<code>修改时间： <time datetime="{{ post.modified | date: '%Y年%m月%d日' }}" itemprop="dateModified">{{ post.modified | date: "%Y年%m月%d日" }}</time></code>
 	                            {% endif %}
 	                        {% endif %}
 	                        &nbsp;&nbsp;类别：
@@ -298,24 +282,12 @@ tags: [学生, iOS, Java]
 	                        Share this Quote
 	                    </p>
 	                    <ul class="social-mini text-center">
-	                        <li>
-	                            <a href="https://twitter.com/intent/tweet?text=&quot;{{ post.title }}&quot;%20{{ site.url }}{{ post.url }}%20via%20&#64;{{ site.owner.twitter }}"
-	                            onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;" data-toggle="tooltip" title="Share on Twitter">
-	                                <i class="icon-twitter"></i>
-	                            </a>
-	                        </li>
-	                        <li>
-	                            <a  href="https://www.facebook.com/sharer/sharer.php?u={{ site.url }}{{ post.url }}"
-	                            onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;" data-toggle="tooltip" title="Share on Facebook">
-	                                <i class="icon-facebook"></i>
-	                            </a>
-	                        </li>
-	                        <li>
-	                            <a href="https://plus.google.com/share?url={{ site.url }}{{ post.url }}"
-	                           onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;" data-toggle="tooltip" title="Share on Google plus">
-	                                <i class="icon-google-plus"></i>
-	                            </a>
-	                        </li>
+                            <li>
+                                <a href="http://v.t.sina.com.cn/share/share.php?url={{ site.url }}{{ page.url }}&title={{ page.title }}"
+                                   onclick="window.open(this.href, 'weibo-share','width=580,height=296');return false;" data-toggle="tooltip" title="Share on Weibo">
+                                    <i class="icon-weibo"></i>
+                                </a>
+                            </li>
 	                    </ul>
 			            <div class="post-body bordered-bottom text-center">
 			                {% if post.description %}
@@ -343,24 +315,12 @@ tags: [学生, iOS, Java]
 	                        Share this Status
 	                    </p>
 	                    <ul class="social-mini text-center">
-	                        <li>
-	                            <a href="https://twitter.com/intent/tweet?text=&quot;{{ post.title }}&quot;%20{{ site.url }}{{ post.url }}%20via%20&#64;{{ site.owner.twitter }}"
-	                            onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;" data-toggle="tooltip" title="Share on Twitter">
-	                                <i class="icon-twitter"></i>
-	                            </a>
-	                        </li>
-	                        <li>
-	                            <a  href="https://www.facebook.com/sharer/sharer.php?u={{ site.url }}{{ post.url }}"
-	                            onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;" data-toggle="tooltip" title="Share on Facebook">
-	                                <i class="icon-facebook"></i>
-	                            </a>
-	                        </li>
-	                        <li>
-	                            <a href="https://plus.google.com/share?url={{ site.url }}{{ post.url }}"
-	                           onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;" data-toggle="tooltip" title="Share on Google plus">
-	                                <i class="icon-google-plus"></i>
-	                            </a>
-	                        </li>
+                            <li>
+                                <a href="http://v.t.sina.com.cn/share/share.php?url={{ site.url }}{{ page.url }}&title={{ page.title }}"
+                                   onclick="window.open(this.href, 'weibo-share','width=580,height=296');return false;" data-toggle="tooltip" title="Share on Weibo">
+                                    <i class="icon-weibo"></i>
+                                </a>
+                            </li>
 	                    </ul>
 	                    <div class="post-info text-center small">
 	                        Status posted @ <time datetime="{{ post.date | date_to_xmlschema }}" class="post-time">{{ post.date | date: "%d %b %Y" }}</time>{% if post.modified %}{% if modifiedtime != posttime %} and <code>last modified on <time datetime="{{ post.modified | date: "%Y-%m-%d" }}" itemprop="dateModified">{{ post.modified | date: "%d %b %Y" }}</time></code>{% endif %}{% endif %}
@@ -441,7 +401,7 @@ tags: [学生, iOS, Java]
 	                        <time datetime="{{ post.date | date_to_xmlschema }}" class="post-time">发表时间：{{ post.date | date: "%Y年%m月%d日" }}</time>
 	                        {% if post.modified %}
 	                            {% if modifiedtime != posttime %}
-	                                &nbsp;&nbsp;<code>修改时间： <time datetime="{{ post.modified | date: "%Y年%m月%d日" }}" itemprop="dateModified">{{ post.modified | date: "%Y年%m月%d日" }}</time></code>
+	                                &nbsp;&nbsp;<code>修改时间： <time datetime="{{ post.modified | date: '%Y年%m月%d日' }}" itemprop="dateModified">{{ post.modified | date: "%Y年%m月%d日" }}</time></code>
 	                            {% endif %}
 	                        {% endif %}
 	                        &nbsp;&nbsp;类别：

@@ -50,7 +50,13 @@ Description: Awesome dude, awesome life
                             </a>
                         </h1>
                         {% else %}
-                        <h1 class="post-title text-center hyper lighter bordered-bottom entry-title" itemprop="headline">{% if page.type == 'quote' %}<i class="icon-quote-left"></i> {% endif %}{% if page.type == 'status' %}<i class="icon-retweet"></i> {% endif %}{% if page.type == 'video' %}<i class="icon-play-circle"></i> {% endif %}{% if page.type == 'photo' %}<i class="icon-picture"></i> {% endif %}{{ page.title }}</h1>
+                        <h1 class="post-title text-center hyper lighter bordered-bottom entry-title" itemprop="headline">
+                            {% if page.type == 'quote' %}<i class="icon-quote-left"></i> {% endif %}
+                            {% if page.type == 'status' %}<i class="icon-retweet"></i> {% endif %}
+                            {% if page.type == 'video' %}<i class="icon-play-circle"></i> {% endif %}
+                            {% if page.type == 'photo' %}<i class="icon-picture"></i> {% endif %}
+                            {{ page.title }}
+                        </h1>
                         {% endif %}
                         <div class="cursive" style="color: #000; font-style:italic;">{{ page.description }}</div>
                         <div class="post-info text-center small">
@@ -60,7 +66,7 @@ Description: Awesome dude, awesome life
                                 <span class="entry-date date published updated">
                             {% endif %}
                             <time datetime="{{ page.date | date_to_xmlschema }}" class="post-time" itemprop="datePublished">发表时间：{{ page.date | date: "%Y年%m月%d日" }}</time>
-                            <span>{% if page.modified %}{% if modifiedtime != posttime %}&nbsp;&nbsp;<code>修改时间： <span class="entry-date date updated"><time datetime="{{ page.modified | date: "%Y年%m月%d日" }}" itemprop="dateModified">{{ page.modified | date: "%Y年%m月%d日" }}</time></code></span>{% endif %}{% endif %}&nbsp;&nbsp;
+                            <span>{% if page.modified %}{% if modifiedtime != posttime %}&nbsp;&nbsp;<code>修改时间： <span class="entry-date date updated"><time datetime="{{ page.modified | date: '%Y年%m月%d日' }}" itemprop="dateModified">{{ page.modified | date: "%Y年%m月%d日" }}</time></code></span>{% endif %}{% endif %}&nbsp;&nbsp;
                             类别： <span class="post-tags">{% for tag in page.categories %}<a href="{{ site.url }}/categories/index.html#{{ page.categories | cgi_encode }}" data-toggle="tooltip" title="Other posts from the {{ tag | capitalize }} category" rel="tag">{{ tag | capitalize }}</a>{% unless forloop.last %}&nbsp;&bull;&nbsp;{% endunless %}{% endfor %}</span>
                         </div>
                     </header>
@@ -75,18 +81,22 @@ Description: Awesome dude, awesome life
                     {% if tagsize != 0 %}
                     <div class="entry-tags text-center">
 
-                        <i class="icon-tags"></i>&nbsp;&nbsp;&nbsp;{% for tag in page.tags %}<a href="{{ site.url }}/tags/index.html#{{ tag | cgi_encode }}" data-toggle="tooltip" title="Posts tagged with {{ tag }}" rel="tag">{{ tag }}</a>{% unless forloop.last %}&nbsp;&bull;&nbsp;{% endunless %}{% endfor %}
-
+                        <i class="icon-tags"></i>
+                        &nbsp;&nbsp;&nbsp;
+                        {% for tag in page.tags %}
+                            <a href="{{ site.url }}/tags/index.html#{{ tag | cgi_encode }}" data-toggle="tooltip" title="Posts tagged with {{ tag }}" rel="tag">{{ tag }}</a>
+                            {% unless forloop.last %}&nbsp;&bull;&nbsp;{% endunless %}
+                        {% endfor %}
                     </div>
                     {% endif %}
                 </div>
-        </div>
-                    <footer class="post-footer entry-meta">
-                        {% if site.share %}{% include share.html %}{% endif %}
-                        {% include signoff.html %}
-                        {% if site.duoshuo_short_name and page.comments == true %}{% include duoshuo.html %}{% endif %}
-                    </footer>
             </article>
+        </div>
+        <footer class="post-footer entry-meta">
+            {% if site.share %}{% include share.html %}{% endif %}
+            {% include signoff.html %}
+            {% if site.duoshuo_short_name and page.comments == true %}{% include duoshuo.html %}{% endif %}
+        </footer>
     </div>
 </div>
 {% include footer.html %}

@@ -11,7 +11,7 @@ excerpt: "利用Cipher类对DES和AES进行加密解密"
 # image: 
 # feature: some-image.jpg
 comments: true
-mathjax: true
+mathjax: flase
 ---
 
 ## 介绍 ##
