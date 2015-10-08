@@ -75,7 +75,8 @@ permalink:   /:categories/:title
 #  footnote_nr: 1
 #  entity_output: as_char
 #  toc_levels: 1..6
-#  use_coderay: false
+#  use_coderay: true
+
 pygments: true
 #highlighter: pygments
 markdown: redcarpet
@@ -96,6 +97,7 @@ redcarpet:
    ,"prettify"
 #   ,"html_toc"
   ]
+  use_coderay: true
 
   coderay:
     coderay_line_numbers: 
