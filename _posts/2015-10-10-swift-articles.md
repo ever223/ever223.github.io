@@ -13,15 +13,17 @@ comments: true
 
 ###1. 基础
 
+* [raywenderlich/swift-style-guide](https://github.com/raywenderlich/swift-style-guide): Swift程序风格指南
 * [Swift中的集合类数据结构](http://blog.csdn.net/yake_099/article/details/48462489): 比较使用`map`,`array`,`set`时的性能
 * (英)[Thinking in Swift, Part 1: Saving ponies][Thinking in Swift, Part 1] : 主要介绍如何避免对可选类型强制解包，以及`if let`, `guard`的用法。
 * (英)[Thinking in Swift, Part 2: map those arrays][Thinking in Swift, Part 2] [(译文)][数组的 Map 方法]: 主要介绍讨论数组的 `map()` 和 `flatMap()` 方法。
+* [iOS应用架构谈 本地持久化方案及动态部署](http://casatwy.com/iosying-yong-jia-gou-tan-ben-di-chi-jiu-hua-fang-an-ji-dong-tai-bu-shu.html?hmsr=toutiao.io&utm_medium=toutiao.io&utm_source=toutiao.io): 本地持久化方案详细介绍
 
 ###2. 调试
 
-* (英)[The LLDB Debugger](http://lldb.llvm.org/tutorial.html)：`LLDB` 调试详细教程
-* [iOS 开发者旅途中的指南针 - LLDB 调试技术](http://swiftcafe.io/2015/09/05/lldb-debug/): 介绍`LLDB`调试技巧
-* [浅谈LLDB调试器](http://www.cocoachina.com/ios/20150126/11021.html)：介绍`LLDB`主要命令的使用
+* (英)[The LLDB Debugger](http://lldb.llvm.org/tutorial.html)：LLDB调试详细教程
+* [iOS 开发者旅途中的指南针 - LLDB 调试技术](http://swiftcafe.io/2015/09/05/lldb-debug/): 介绍LLDB调试技巧
+* [浅谈LLDB调试器](http://www.cocoachina.com/ios/20150126/11021.html)：介绍LLDB主要命令的使用
 
 ## 资源
 
@@ -29,15 +31,22 @@ comments: true
 
 * [ipader/SwiftGuide](https://github.com/ipader/SwiftGuide)：Swift 语言指南
 
+###2. 类库
+
+* [radex/SwiftyUserDefaults](https://github.com/radex/SwiftyUserDefaults):轻量级数据存储类`NSUserDefaults`扩展类，它使类型数据访问和存储更为便捷、直观。
+* [SwiftyJSON/SwiftyJSON](https://github.com/SwiftyJSON/SwiftyJSON): 非常实用的JSON处理库
+
 ###2. Github 工具类
 
-* [facebook/chisel](https://github.com/facebook/chisel)：`LLDB`调试利器
-
+* [facebook/chisel](https://github.com/facebook/chisel)：LLDB调试利器
 
 ## 博客
 
 * [SwiftGG](http://swift.gg): 高质量的swift译文网站
+* [开发技术前线](http://www.devtf.cn): 高质量技术文章的聚合网站
 * [Swift Cafe](http://swiftcafe.io): 专注阅读体验 - 品味开发之美
+* [NSHipster中文版](http://nshipster.cn) [(英文版)](http://nshipster.com): 很多知名iOS开发大神写的文章
+* [raywenderlich.com](http://www.raywenderlich.com):著名的iOS/OS X博客及开发教程网站
 * (英)[Crunchy Development](http://alisoftware.github.io): swift编程思想系列
 
 
