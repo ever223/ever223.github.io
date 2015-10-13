@@ -10,6 +10,7 @@ comments: true
 ---
 
 # 方法一： Class constant
+静态常量
 
 ```swift
 class SingletonA {
@@ -24,6 +25,7 @@ class SingletonA {
 ```
 
 # 方法二：Nested struct
+在方法内定义静态常量
 
 ```swift
 class SingletonB {
@@ -39,6 +41,7 @@ class SingletonB {
 ```
 
 #方法三：dispatch_once
+使用dispatch_once可以保证其中的代码只执行一次
 
 ```swift
 class SingletonC {
