@@ -30,6 +30,7 @@ comments: true
 ###1. 通用
 
 * [ipader/SwiftGuide](https://github.com/ipader/SwiftGuide)：Swift 语言指南
+* [sxyx2008/awesome-ios-animation](https://github.com/sxyx2008/awesome-ios-animation): 收集整理了下iOS平台下比较主流炫酷的几款动画框架。
 
 ###2. 类库
 
