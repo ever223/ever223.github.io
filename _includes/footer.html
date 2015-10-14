@@ -59,8 +59,13 @@
                 </a>
             </li>{% endif %}
             {% if site.owner.douban %}<li>
-                <a href="http://www.douban.com/people/{{ site.owner.douban }}" data-toggle="tooltip" title="{{ site.owner.name}} on 豆瓣" target="_blank">
-                    <i class="icon-user"></i>
+                <a href="http://www.douban.com/people/{{ site.owner.csdn }}" data-toggle="tooltip" title="{{ site.owner.name}} on 豆瓣" target="_blank">
+                    <i class="icon-douban"></i>
+                </a>
+            </li>{% endif %}
+            {% if site.owner.csdn %}<li>
+                <a href="http://blog.csdn.net/{{ site.owner.csdn }}" data-toggle="tooltip" title="{{ site.owner.name}} on CSDN" target="_blank">
+                    <i class="icon-csdn"></i>
                 </a>
             </li>{% endif %}
         </ul>

@@ -216,7 +216,7 @@ tags: [学生, iOS, Java]
 	                        &nbsp;&nbsp;类别：
 	                        <span class="post-tags">
 		                        {% for tag in post.categories %}
-		                            <a href="{{ site.url }}/categories/index.html#{{ post.categories | cgi_encode }}" data-toggle="tooltip" title="Other posts from the {{ tag | capitalize }} category" rel="tag">{{ tag | capitalize }}</a>
+		                            <a href="{{ site.url }}/categories/index.html#{{ post.categories | cgi_encode }}" data-toggle="tooltip" title="Other posts from the {{ tag }} category" rel="tag">{{ tag }}</a>
 		                            {% unless forloop.last %}
 		                               &nbsp;&bull;&nbsp;
 		                            {% endunless %}
@@ -253,7 +253,7 @@ tags: [学生, iOS, Java]
                 <nav class="pagination" role="navigation">
 {% if paginator.previous_page %}
 {% if paginator.previous_page == 1 %}
-        <a class="newer-posts" href="{{ site.url }}">&larr; Newer Posts</a>
+        <a class="newer-posts" href="{{ site.url }}/">&larr; Newer Posts</a>
 {% else %}
 		<a class="newer-posts" href="{{ site.url }}/page{{ paginator.previous_page }}">&larr; Newer Posts</a>
 {% endif %}

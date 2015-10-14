@@ -1492,3 +1492,9 @@ a .icon-flip-vertical:before {
 .icon-renren:before {
     content: "\f18b";
 }
+.icon-douban:before {
+    content: "豆";
+}
+.icon-csdn:before {
+    content: "C";
+}
