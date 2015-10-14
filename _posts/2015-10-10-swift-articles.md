@@ -19,6 +19,7 @@ comments: true
 * (英)[Thinking in Swift, Part 2: map those arrays][Thinking in Swift, Part 2] [(译文)][数组的 Map 方法]: 主要介绍讨论数组的 `map()` 和 `flatMap()` 方法。
 * [iOS应用架构谈 本地持久化方案及动态部署](http://casatwy.com/iosying-yong-jia-gou-tan-ben-di-chi-jiu-hua-fang-an-ji-dong-tai-bu-shu.html?hmsr=toutiao.io&utm_medium=toutiao.io&utm_source=toutiao.io): 本地持久化方案详细介绍
 
+
 ###2. 调试
 
 * (英)[The LLDB Debugger](http://lldb.llvm.org/tutorial.html)：LLDB调试详细教程
@@ -30,6 +31,7 @@ comments: true
 ###1. 通用
 
 * [ipader/SwiftGuide](https://github.com/ipader/SwiftGuide)：Swift 语言指南
+* [ios_swift开发资源整理](http://blog.csdn.net/colouful987/article/details/46125113): swift资源合集
 * [sxyx2008/awesome-ios-animation](https://github.com/sxyx2008/awesome-ios-animation): 收集整理了下iOS平台下比较主流炫酷的几款动画框架。
 
 ###2. 类库
@@ -37,7 +39,7 @@ comments: true
 * [radex/SwiftyUserDefaults](https://github.com/radex/SwiftyUserDefaults):轻量级数据存储类`NSUserDefaults`扩展类，它使类型数据访问和存储更为便捷、直观。
 * [SwiftyJSON/SwiftyJSON](https://github.com/SwiftyJSON/SwiftyJSON): 非常实用的JSON处理库
 
-###2. Github 工具类
+###3. Github 工具类
 
 * [facebook/chisel](https://github.com/facebook/chisel)：LLDB调试利器
 
@@ -47,6 +49,7 @@ comments: true
 * [开发技术前线](http://www.devtf.cn): 高质量技术文章的聚合网站
 * [Swift Cafe](http://swiftcafe.io): 专注阅读体验 - 品味开发之美
 * [NSHipster中文版](http://nshipster.cn) [(英文版)](http://nshipster.com): 很多知名iOS开发大神写的文章
+* [PMST](http://blog.csdn.net/colouful987/article/category/2898663/2): 介绍SpriteKit游戏引擎的系列博客
 * [raywenderlich.com](http://www.raywenderlich.com):著名的iOS/OS X博客及开发教程网站
 * (英)[Crunchy Development](http://alisoftware.github.io): swift编程思想系列
 
