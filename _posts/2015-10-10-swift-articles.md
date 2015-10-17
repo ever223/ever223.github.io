@@ -31,6 +31,9 @@ comments: true
 ###1. 通用
 
 * [ipader/SwiftGuide](https://github.com/ipader/SwiftGuide)：Swift 语言指南
+* [matteocrippa/awesome-swift](https://github.com/matteocrippa/awesome-swift): awesome swift
+* [sxyx2008/awesome-ios-chart](https://github.com/sxyx2008/awesome-ios-chart): A curated list of awesome iOS chart libraries, including Objective-C and Swift
+* [dkhamsing/open-source-ios-apps](https://github.com/dkhamsing/open-source-ios-apps): Collaborative List of Open-Source iOS Apps
 * [ios_swift开发资源整理](http://blog.csdn.net/colouful987/article/details/46125113): swift资源合集
 * [sxyx2008/awesome-ios-animation](https://github.com/sxyx2008/awesome-ios-animation): 收集整理了下iOS平台下比较主流炫酷的几款动画框架。
 
@@ -40,7 +43,7 @@ comments: true
 * [SwiftyJSON/SwiftyJSON](https://github.com/SwiftyJSON/SwiftyJSON): 非常实用的JSON处理库
 
 ###3. Github 工具类
-
+* [iSwift](http://iswift.org): 将OC转化为swift
 * [facebook/chisel](https://github.com/facebook/chisel)：LLDB调试利器
 
 ## 博客
