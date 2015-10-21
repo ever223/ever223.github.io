@@ -12,6 +12,7 @@ comments: true
 1. [安装cocoapods](#安装cocoapods)
 1. [MARK、TODO、FIXME](#MARK、TODO、FIXME)
 1. [.gitignore文件](#.gitignore文件)
+1. [Controller的生命周期](#Controller的生命周期)
 
 #安装cocoapods
 
@@ -85,4 +86,51 @@ DerivedData
 #CocoaPods
 Pods
 ~~~
+
+
+#Controller的生命周期
+
+```swift
+import UIKit
+//就是view的生命周期，下面已经按方法执行顺序进行了排序
+class ViewController: UIViewController {
+
+    //自定义控制器view，这个方法只有实现了才会执行
+    override func loadView() {
+        view = UIView()
+    }
+    // view是延迟加载，只要view加载完毕就调用这个方法
+    override func viewDidLoad() {
+        super.viewDidLoad()
+    }
+    // view即将显示
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+    }
+    //view即将开始布局子控件
+    override func viewWillLayoutSubviews() {
+        super.viewWillLayoutSubviews()
+    }
+    // view已经完成子控件的布局
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+    }
+    // view已经出现
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
+    }
+    // view即将消失
+    override func viewWillDisappear(animated: Bool) {
+        super.viewWillDisappear(animated)
+    }
+    // view已经消失
+    override func viewDidDisappear(animated: Bool) {
+        super.viewDidDisappear(animated)
+    }
+    // 收到内存警告
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+    }
+}
+```
  
