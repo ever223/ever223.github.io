@@ -32,6 +32,35 @@ SELECT * FROM TEAM ORDER BY NLSSORT(col_name,'NLS_SORT = SCHINESE_RADICAL_M');
 * 更改session:`alter SESSION set NLS_SORT = SCHINESE_PINYIN_M;`
 
 注意一下性能问题,按oracle官方文档的解释,oracle在对中文列建立索引时,是按照2进制编码进行排序的,所以如果`NLS_SORT`被设置为`BINARY`时，排序则可以利用索引.如果不是2进制排序，而是使用上面介绍的3种针对中文的特殊排序，则oracle无法使用索引，会进行全表扫描.这点一定要注意,多用plsql工具比较一下执行效率.解决方法是,在此列上建立linguistic index.
-例如:`CREATE INDEX nls_index ON my_table (NLSSORT(col_name, 'NLS_SORT = SCHINESE_PINYIN_M'));`
+例如:
+`CREATE INDEX nls_index ON my_table (NLSSORT(col_name, 'NLS_SORT = SCHINESE_PINYIN_M'));`
 
-###2. 
+###2. Oracle添加和查看表、字段的注释
+
+* 给表添加注释
+
+~~~sql
+COMMENT ON TABLE TABLENAME IS '注释内容';
+~~~
+
+* 查看表的注释
+
+~~~sql
+SELECT TABLE_NAME, TABLE_TYPE, COMMENTS WHERE TABLE_NAME = '表名';
+~~~
+
+* 给字段添加注释
+
+~~~sql
+COMMENT ON COLUMN 表名.字段名 IS '注释内容';
+~~~
+
+* 查看字段的注释
+
+~~~sql
+SELECT TABLE_NAME, COLUMN_NAME, COMMENTS WHERE TABLE_NAME = '表名';
+~~~
+
+
+
+
