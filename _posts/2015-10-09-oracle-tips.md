@@ -46,7 +46,7 @@ COMMENT ON TABLE TABLENAME IS '注释内容';
 * 查看表的注释
 
 ~~~sql
-SELECT TABLE_NAME, TABLE_TYPE, COMMENTS WHERE TABLE_NAME = '表名';
+SELECT TABLE_NAME, TABLE_TYPE, COMMENTS FROM USER_TAB_COMMENTS WHERE TABLE_NAME = '表名';
 ~~~
 
 * 给字段添加注释
@@ -58,8 +58,27 @@ COMMENT ON COLUMN 表名.字段名 IS '注释内容';
 * 查看字段的注释
 
 ~~~sql
-SELECT TABLE_NAME, COLUMN_NAME, COMMENTS WHERE TABLE_NAME = '表名';
+SELECT TABLE_NAME, COLUMN_NAME, COMMENTS USER_COL_COMMENTS WHERE TABLE_NAME = '表名';
 ~~~
+
+* 查看字段的详细信息
+
+~~~sql
+SELECT 
+  T.TABLE_NAME,      --表名
+  T.COLUMN_NAME,     -- 字段名 
+  T.DATA_TYPE,       --数据类型
+  T.DATA_LENGTH,     --长度 
+  T.DATA_PRECISION,  --整数位 
+  T.DATA_SCALE,      --小数位
+  T.NULLABLE,        --允许空值
+  T.DATA_DEFAULT,    -- 缺省值
+  C.COMMENTS         -- 备注 
+FROM User_Tab_Columns T 
+JOIN USER_COL_COMMENTS C ON (C.TABLE_NAME = T.TABLE_NAME AND C.Column_Name = T.Column_Name ) 
+WHERE C.TABLE_NAME = '表名';
+~~~
+
 
 
 
