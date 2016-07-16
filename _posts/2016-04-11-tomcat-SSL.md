@@ -9,17 +9,19 @@ excerpt: tomcat配置SSL
 comments: true
 ---
 
+
 1. 生成证书
+  
   
   ```
  $ JAVA_HOME/bin/keytool -v -genkey -alias tomcat -keyalg RSA -keystore /Users/xiaoo_gan/Downloads/tomcat.keystore
  $ JAVA_HOME/bin/keytool -exportcert -alias tomcat -keystore /Users/xiaoo_gan/Downloads/tomcat.keystore -file /Users/xiaoo_gan/Downloads/tomcat.cer
-  ```
-  按提示完成问答,即可生成证书  
-  PS:问题 What is your first and last name? 填写本机IP地址，本地测试可以填写localhost
+ ```
+按提示完成问答,即可生成证书  
+PS:问题 What is your first and last name? 填写本机IP地址，本地测试可以填写localhost
   
 2. 配置`tomcat/conf/server.xml`
-  
+
   找到如下注释
   
   ```xml
@@ -37,7 +39,7 @@ comments: true
   
   改为
   
-  ```xml
+ ```xml
       <Connector port="8443" 
       protocol="HTTP/1.1" 
       SSLEnabled="true"   
@@ -48,9 +50,10 @@ comments: true
       keystoreFile="/Users/xiaoo_gan/Downloads/tomcat.keystore" 
       keystorePass="tomcat"
       sslProtocol="TLS" />
- ```
-  `keystoreFile`: 为步骤1生成证书的位置  
-  `keystorePass`: 为步骤1生成证书时设置的密码
+```
+
+ `keystoreFile`: 为步骤1生成证书的位置  
+ `keystorePass`: 为步骤1生成证书时设置的密码
   
 3. 配置项目WEB_INF/web.xml (非spring－security项目)
   
