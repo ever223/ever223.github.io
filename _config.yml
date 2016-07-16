@@ -79,8 +79,7 @@ permalink:   /:categories/:title
 #  toc_levels: 1..6
 #  use_coderay: true
 
-pygments: true
-#highlighter: pygments
+#highlighter: rouge
 markdown: kramdown
 redcarpet:
   extensions: [
