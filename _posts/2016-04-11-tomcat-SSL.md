@@ -2,7 +2,7 @@
 layout: post
 title: tomcat配置SSL
 date: 2016-04-11 11:40
-modified: 				
+modified: 2016-07-11 11:40				
 category: JAVA
 tags: ["JAVA","tomcat"]
 excerpt: tomcat配置SSL
@@ -10,7 +10,7 @@ comments: true
 ---
 
 
-1. 生成证书
+## 生成证书
   
   
   ```
@@ -20,11 +20,11 @@ comments: true
 按提示完成问答,即可生成证书  
 PS:问题 What is your first and last name? 填写本机IP地址，本地测试可以填写localhost
   
-2. 配置`tomcat/conf/server.xml`
+## 配置`tomcat/conf/server.xml`
 
   找到如下注释
   
-  ```xml
+  ```
   <!-- Define a SSL HTTP/1.1 Connector on port 8443
          This connector uses the BIO implementation that requires the JSSE
          style configuration. When using the APR/native implementation, the
@@ -39,7 +39,7 @@ PS:问题 What is your first and last name? 填写本机IP地址，本地测试�
   
   改为
   
- ```xml
+ ```
       <Connector port="8443" 
       protocol="HTTP/1.1" 
       SSLEnabled="true"   
@@ -55,11 +55,11 @@ PS:问题 What is your first and last name? 填写本机IP地址，本地测试�
  `keystoreFile`: 为步骤1生成证书的位置  
  `keystorePass`: 为步骤1生成证书时设置的密码
   
-3. 配置项目WEB_INF/web.xml (非spring－security项目)
+## 配置项目WEB_INF/web.xml (非spring－security项目)
   
   添加
   
-  ```xml
+  ```
       <login-config>
         <!-- Authorization setting for SSL -->
         <auth-method>CLIENT-CERT</auth-method>
@@ -77,3 +77,33 @@ PS:问题 What is your first and last name? 填写本机IP地址，本地测试�
     </security-constraint>
   ```
   
+## 配置URIEncoding="UTF-8"
+ 
+### 问题：由于将`http`转成`https`，`http:8080`重定向到`https:8443`
+
+所以在tomcat中端口号8080所在的Connector设置`URIEncoding="UTF-8"`不再起作用，
+
+```
+    <Connector port="8080" 
+    	protocol="HTTP/1.1"
+    	URIEncoding="UTF-8"
+      	connectionTimeout="20000"
+      	redirectPort="8443"
+      	useBodyEncodingForURI="true"/>
+```
+
+故应该在端口8443所在的Connector中设置`URIEncoding="UTF-8"`
+
+```
+    <Connector port="8443" 
+      protocol="HTTP/1.1" 
+      SSLEnabled="true"   
+      maxThreads="150" 
+      scheme="https" 
+      secure="true" 
+      clientAuth="false" 
+      keystoreFile="D:\tomcat.keystore" 
+      keystorePass="tomcat"
+      sslProtocol="TLS"
+      URIEncoding="UTF-8"/>
+```
