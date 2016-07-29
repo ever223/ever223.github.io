@@ -1,13 +1,14 @@
 ---
 layout: post
 title: 海量数据操作(排序、Top k、查重等)
-date: 2016-07-27 11:40
-modified: 2016-07-27 11:40				
+date: 2016-07-29 11:40
+modified: 2016-07-29 11:40				
 category: 面试
 tags: ["算法","面试"]
-excerpt: 核心思想: 分而治之/hash映射 + hash统计 + 堆/快速/归并排序，就是先映射，而后统计，最后排序
+excerpt: 核心思想－分而治之/hash映射 + hash统计 + 堆/快速/归并排序，就是先映射，而后统计，最后排序
 comments: true
 ---
+
 
 
 
